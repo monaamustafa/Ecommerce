@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function Blog() {
   return (
-    <div>Blog</div>
+    <div>
+      <h1>huhu</h1>Blog</div>
   )
 }

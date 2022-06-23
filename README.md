@@ -1,17 +1,6 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## `npm install react-bootstrap`
-## `npm i --save @fortawesome/fontawesome-svg-core`
-# Free icons styles
-## `npm i --save @fortawesome/free-solid-svg-icons`
-## `npm i --save @fortawesome/free-regular-svg-icons`
-
-
-
-
-
 ## Available Scripts
 
 In the project directory, you can run:
