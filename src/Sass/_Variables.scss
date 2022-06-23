@@ -1,0 +1,36 @@
+$MainColor:#f30c79;
+// $MainColor:#F27F1B;
+// $MainColor:#543D8F;
+
+// #543D8F
+// #DEBAFF
+
+// $SecondColor:#F2AC29;
+$SecondColor:#c2015b;
+
+$WhiteColor:#fff;
+$logoFont:  'Orbitron', sans-serif;
+$bodyFont:  'Alegreya Sans', sans-serif;
+
+@mixin btnStyles {
+    background-color: $MainColor !important;
+    border: none !important;
+    border-radius: 20px !important;
+    color: #fff !important;
+    &:hover{
+        background-color: #333 !important;
+
+    }
+    
+}
+
+// Alegreya+Sans:wght@400;700;800
+// Space+Grotesk:wght@300;600;700
+// font-family: 'Alegreya Sans', sans-serif;
+// font-family: 'Great Vibes', cursive;
+// logo
+// font-family: 'Orbitron', sans-serif;
+// font-family: 'Satisfy', cursive;
+
+
+// font-family: 'Space Grotesk', sans-serif;

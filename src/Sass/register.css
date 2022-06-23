@@ -1,0 +1,18 @@
+.MColor {
+  background-color: #f30c79 !important;
+  border: none !important;
+  border-radius: 20px !important;
+  color: #fff !important;
+  width: 100%;
+}
+.MColor:hover {
+  background-color: #333 !important;
+}
+
+.formItem {
+  padding: 3%;
+  border: 1px solid #ddd;
+  width: 43%;
+  margin: 2%;
+  border-radius: 5px;
+}/*# sourceMappingURL=register.css.map */

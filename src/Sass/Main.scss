@@ -1,0 +1,71 @@
+@import "./_Variables";
+@import "./_bootstrapChanges";
+body {
+  font-family: $bodyFont;
+}
+a {
+  text-decoration: none !important;
+}
+.BlackColor {
+  color: #000 !important;
+}
+.MLogo a {
+  font-size: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: $logoFont;
+  color: #ddd;
+  &:hover {
+    color: $MainColor;
+  }
+}
+.flex-con {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.productCard {
+  width: 30%;
+  img {
+    width: 100%;
+  }
+}
+
+.about {
+  h5{
+    font-size: 40px;
+    font-weight: 400;
+  }
+  .Mission-Vision {
+    
+    padding-top: 50px;
+    padding-bottom: 100px;
+    .Mission-Vision-img {
+      width: 50%;
+
+      padding: 2%;
+      img {
+        width: 100%;
+      }
+    }
+    .Mission-Vision-content {
+      width: 50%;
+
+      padding: 2%;
+      h6 {
+        font-weight: 400;
+        font-size: 40px;
+      }
+    }
+  }
+  .Reasons {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .ReasonsIcon{
+      background-color: #17b0c7;
+      padding: 50px;
+      font-size: 60px;
+      color: #FFF;
+      border-radius: 50%;
+    }
+  }
+}

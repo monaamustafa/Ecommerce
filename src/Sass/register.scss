@@ -1,0 +1,14 @@
+@import "./_Variables";
+
+.MColor{
+    @include btnStyles;
+    width: 100%;
+} 
+
+.formItem{
+    padding: 3%;
+    border: 1px solid #ddd ;
+    width: 43%;
+    margin: 2%;
+    border-radius: 5px;
+}

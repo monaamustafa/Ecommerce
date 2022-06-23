@@ -1,0 +1,73 @@
+.fNav {
+  border-bottom: 1px solid #ddd;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#dropdown-basic {
+  color: black;
+  margin: 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+}
+
+#dropdown-basic:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#dropnav {
+  margin: auto 0;
+}
+
+svg:hover {
+  color: #f30c79;
+}
+
+#searchButton {
+  background-color: transparent !important;
+  border: none;
+  color: #DDD;
+  border-right: 1px solid #ddd;
+  /* position: absolute; */
+}
+
+#searchForm {
+  height: 40px;
+  border-radius: 50px;
+  padding-right: 20px;
+  margin: auto 20px;
+  border: 1px solid #ddd;
+}
+
+.searchBar {
+  background-color: transparent;
+}
+
+#searchForm ::-moz-placeholder {
+  padding: 50px;
+}
+
+#searchForm :-ms-input-placeholder {
+  padding: 50px;
+}
+
+#searchForm ::placeholder {
+  padding: 50px;
+}
+
+#searchTerm {
+  border: 0;
+}
+
+/* .Icons{
+  margin: auto;
+} */
+.Icons {
+  margin: auto;
+}
+.Icons .icon {
+  margin: auto 10px;
+}/*# sourceMappingURL=headerStyles.css.map */
