@@ -38,7 +38,6 @@ export default function About() {
       <section className="text-center">
         <h5>Reasons to choose Us</h5>
         <p>Top 5 Reasons Why You Should Shop With Us</p>
-
         <div className="d-flex justify-content-between">
           <div className="Reasons">
             <FontAwesomeIcon

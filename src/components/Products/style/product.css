@@ -1,0 +1,99 @@
+p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.prod-img {
+  width: 48%;
+}
+.prod-img img {
+  width: 100%;
+  display: inline-block;
+  margin: 0 0.5rem;
+  -webkit-animation: zoomIn;
+          animation: zoomIn;
+  /* referring directly to the animation's @keyframe declaration */
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  /* don't forget to set a duration! */
+}
+
+.prod-cont {
+  width: 50%;
+}
+.prod-cont .prod-info {
+  width: 40%;
+}
+.prod-cont .prod-info .p-head {
+  margin-bottom: 20px !important;
+  font-weight: 700;
+}
+.prod-cont .add-to-cart-btn {
+  background-color: #c2015b;
+  padding: 10px 25px;
+  border: 0;
+  border-radius: 20px;
+  color: #fff;
+  letter-spacing: 3px;
+}
+.prod-cont .icon {
+  color: #c2015b;
+  font-size: 40px;
+}
+.prod-cont .why-us {
+  width: 100%;
+  padding-top: 15px;
+  flex-wrap: wrap;
+}
+.prod-cont .why-us .why-us-details {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  width: 50% !important;
+}
+.prod-cont .why-us .why-us-details .details {
+  padding: 1%;
+}
+.prod-cont .why-us .why-us-details .details p {
+  line-height: 1.1;
+}
+.prod-cont .why-us .why-us-details .details .P-head {
+  font-weight: 700;
+}
+.prod-cont .add-cart {
+  padding-top: 30px;
+}
+.prod-cont .add-cart .add-to-cart-form {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.prod-cont .add-to-wish-list svg:hover {
+  fill: #c2015b;
+}
+
+.Related-poducts {
+  margin-bottom: 50px;
+  margin-top: 80px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+.Related-poducts h3 {
+  display: inline-block;
+  margin-bottom: 90px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #253237;
+  text-transform: capitalize;
+  border-bottom: 1px solid #e3e3e3;
+}
+.Related-poducts h3::after {
+  content: "";
+  border-bottom: 2px solid #f30c79;
+  width: 50px;
+  display: block;
+}
+.Related-poducts .productCard {
+  width: 18% !important;
+}/*# sourceMappingURL=product.css.map */

@@ -4,11 +4,12 @@ import Error from "./components/Error";
 import Home from "./components/Home/Home";
 import Blog from "./components/Blog";
 import PageLayout from "./components/PageLayouts/PageLayout";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import Login from "./components/Login/Login";
+import Register from "./components/Login/Register";
 import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import ProductDetails from "./components/Products/ProductDetails";
+import ListOfProducts from "./components/Products/ListOfProducts";
 function App() {
   return (
     <Routes>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/product" element={<ListOfProducts />} />
         <Route path="/register" element={<Register/>} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/blogs" element={<Blog />} />

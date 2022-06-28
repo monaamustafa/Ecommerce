@@ -1,31 +1,30 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {connect} from 'react-redux'
-
+import { connect } from "react-redux";
 import { Form, Button, Dropdown } from "react-bootstrap";
-import "../../Sass/headerStyles.css"
+import './style/Header.css'
 function MainNav(props) {
-  
-  let{count,increase,decrease}=props
+  let { count, increase, decrease } = props;
   return (
     <div className="container-fluid fNav">
       <div className="d-flex justify-content-around">
         <section id="dropnav">
-        <Dropdown >
-          <Dropdown.Toggle id="dropdown-basic">
-            <FontAwesomeIcon icon="fa-solid fa-user" />
-            My Account
-          </Dropdown.Toggle>
-          <Dropdown.Menu>
-            <Dropdown.Item href="/login">Login</Dropdown.Item>
-            <Dropdown.Item href="register">Register</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
-
+          <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic">
+              <FontAwesomeIcon icon="fa-solid fa-user" />
+              My Account
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="/login">Login</Dropdown.Item>
+              <Dropdown.Item href="register">Register</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </section>
-   
+
         <section className="MLogo">
-          <h4><a href="/home">MOON</a></h4>
+          <h4>
+            <a href="/home">MOON</a>
+          </h4>
         </section>
         <section className="d-flex justify-content-between">
           <Form className="d-flex" id="searchForm">
@@ -54,7 +53,6 @@ function MainNav(props) {
               </svg>
             </div>
             <div>
-
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -66,7 +64,6 @@ function MainNav(props) {
                 <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
               </svg>
               {count}
-          
             </div>
           </div>
         </section>
@@ -75,17 +72,15 @@ function MainNav(props) {
   );
 }
 
-let mapStateToProps=(state)=>{
-  return{
-      count:state.counter.count
-  }
-  
-}
-let mapDispatchToProps=(dispatch)=>{
-  return{
-      increase:()=>dispatch({type:"INCREASE"}),
-      decrease:()=>dispatch({type:"DECREASE"})
-  }
-}
-export default connect(mapStateToProps,mapDispatchToProps)(MainNav)
-
+let mapStateToProps = (state) => {
+  return {
+    count: state.counter.count,
+  };
+};
+let mapDispatchToProps = (dispatch) => {
+  return {
+    increase: () => dispatch({ type: "INCREASE" }),
+    decrease: () => dispatch({ type: "DECREASE" }),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(MainNav);

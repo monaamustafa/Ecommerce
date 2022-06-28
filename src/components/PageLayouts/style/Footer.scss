@@ -1,4 +1,4 @@
-@import "./_Variables";
+@import "../../Sass/_Variables";
 .footer {
   padding: 100px 50px;
   background-color: #f6f6f6;
@@ -8,16 +8,21 @@
       padding: 1%;
     }
     .phone-icon {
-      font-size: 60px;
-      padding: 1%;
-      margin: 1%;
-      color: $MainColor;
+      margin: 2%;
     }
   }
   .social-icon {
-    font-size: 30px;
+    font-size: 20px;
     .icon {
-      padding: 1%;
+      padding: 20px;
+      &:hover{
+        display: inline-block;
+        margin: 0 0.5rem;
+      
+        animation: bounce; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+      
+      }
     }
   }
 }
@@ -37,7 +42,7 @@
       border-bottom: 1px solid #e3e3e3;
       &::after {
         content: "";
-        border-bottom: 3px solid $MainColor;
+        border-bottom: 2px solid $MainColor;
         width: 50px;
         display: block;
       }

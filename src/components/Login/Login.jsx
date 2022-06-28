@@ -1,10 +1,14 @@
 import React from "react";
 import { Form, Button } from "react-bootstrap";
-import "../Sass/register.css";
+import { NavLink } from "react-router-dom";
+import LocationPanner from "../LocationPanner";
+import "./style/register.css";
 
 export default function Login() {
   return (
-    <div className="container">
+    <>
+      <LocationPanner loc="login" path="/login" />
+      <div className="container">
       <div className="d-flex justify-content-center">
         <div className="formItem">
           <Form>
@@ -32,16 +36,16 @@ export default function Login() {
         </div>
         <div className="formItem">
           <h4>Don't Have An Account? Register Now !</h4>
-          <a
-            href="/register"
+          <NavLink to={'/register'}
+            
             className="btn MColor"
-            variant="primary"
-            type="submit"
-          >
+            >
             REGISTER NOW!
-          </a>
+          </NavLink>
         </div>
       </div>
     </div>
+  
+    </>
   );
 }

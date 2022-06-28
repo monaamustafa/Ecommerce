@@ -1,0 +1,42 @@
+@import "../../Sass/_Variables";
+
+.slider-content {
+  color: #000 !important;
+  position: absolute;
+  text-align: left !important;
+  top: 15%;
+  left: 10%;
+  width: 38%;
+  h4 {
+    font-size: 40px;
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
+  h3 {
+    font-weight: 700;
+    font-size: 40px;
+    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+  }
+  p {
+    color: #5c5e5f;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.4;
+    animation: fadeInRight; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+  }
+  .shop-now {
+    margin-top: 60px;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 20px;
+    color: azure;
+    background-color: $MainColor;
+    animation: backInDown; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+  }
+}

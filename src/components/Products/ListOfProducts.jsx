@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import getProductAction from "../../Redux/action/getProductAction";
 import { connect } from "react-redux";
 import { useState } from "react";
-
+import { NavLink } from "react-router-dom";
+import LocationPanner from "../LocationPanner";
 function ListOfProducts(props) {
-  let [productState,setProductState]=useState();
+  let [productState, setProductState] = useState();
   let { products, getProducts } = props;
   useEffect(() => {
     getProducts();
@@ -12,23 +13,26 @@ function ListOfProducts(props) {
     console.log(productState);
   });
   return (
-    <div className="container" >
-      <h3 className="bg-info p-3">products List</h3>
-      <div className="d-flex  flex-con ">
-        {products &&
-          products.map((product, index) => {
-            return (
-              <div className="bg-light productCard" key={product.id}>
-                <img src={product.image} alt="sdkjnjhs"/>
-                <h6>
-                  {product.id}:{product.name}
-                </h6>
-                <p>{product.price}</p>
-                <hr />
-                <a href={`product/${product.id}`}>Show</a>
-              </div>
-            );
-          })}
+    <div>
+      <LocationPanner loc="Products" path="/product" />
+      <div className="container">
+        <h3 className=" p-3">products List</h3>
+        <div className="d-flex  flex-con ">
+          {products &&
+            products.map((product, index) => {
+              return (
+                <div className="productCard" key={product.id}>
+                  <img src={product.image} alt="sdkjnjhs" />
+                  <h6>
+                    {product.name}
+                  </h6>
+                  <p>{product.price}</p>
+                  <hr />
+                  <NavLink to={`/product/${product.id}`}>Show</NavLink>
+                </div>
+              );
+            })}
+        </div>
       </div>
     </div>
   );

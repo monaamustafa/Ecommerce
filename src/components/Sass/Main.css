@@ -1,0 +1,189 @@
+.carousel-indicators [data-bs-target] {
+  background-color: #f30c79;
+}
+
+.carousel .carousel-control-next-icon {
+  background-color: transparent;
+}
+.carousel .carousel-control-prev-icon {
+  background-color: transparent;
+}
+.carousel:hover .carousel-control-next-icon {
+  border-radius: 50%;
+  background-color: #fff;
+  transition: all ease-in-out 1s;
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23ddd%27%3e%3cpath d=%27M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z%27/%3e%3c/svg%3e");
+}
+.carousel:hover .carousel-control-prev-icon {
+  border-radius: 50%;
+  background-color: #fff;
+  transition: background-image ease-in-out 1s;
+  background-image: url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23ddd%27%3e%3cpath d=%27M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z%27/%3e%3c/svg%3e");
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+p {
+  margin: 0 !important;
+}
+
+.breadcrumbs {
+  background-image: url("https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  height: 100px;
+  background-size: cover;
+  text-align: center;
+  padding: 90px;
+}
+.breadcrumbs .location-link {
+  color: #eee;
+  text-shadow: 3px 3px 2px rgb(128, 76, 109);
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.breadcrumbs .location-link:hover {
+  color: #f30c79;
+}
+
+.MLogo a {
+  font-size: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  color: #ddd;
+}
+.MLogo a:hover {
+  color: #f30c79;
+}
+
+.flex-con {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.productCard {
+  width: 31%;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+}
+.productCard:hover {
+  border-color: #f30c79;
+}
+.productCard img {
+  width: 100%;
+}
+
+.about h5 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.about .Mission-Vision {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.about .Mission-Vision .Mission-Vision-img {
+  width: 50%;
+  padding: 2%;
+}
+.about .Mission-Vision .Mission-Vision-img img {
+  width: 100%;
+}
+.about .Mission-Vision .Mission-Vision-content {
+  width: 50%;
+  padding: 2%;
+}
+.about .Mission-Vision .Mission-Vision-content h6 {
+  font-weight: 400;
+  font-size: 40px;
+}
+.about .Reasons {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.about .Reasons .ReasonsIcon {
+  background-color: #17b0c7;
+  padding: 50px;
+  font-size: 60px;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.ItemsBar {
+  padding: 100px 0;
+}
+.ItemsBar .imgs {
+  background-size: cover;
+  padding: 40px;
+  width: 31%;
+}
+.ItemsBar .imgs h4 {
+  color: rgb(73, 73, 73);
+  font-size: 16px;
+  font-weight: 100;
+  padding-bottom: 10px;
+}
+.ItemsBar .imgs h2 {
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+.ItemsBar .imgs .nav-link {
+  text-decoration: none;
+  background-color: white;
+  color: #0e1333;
+  font-family: "Gilroy-ExtraBold";
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.ItemsBar .imgs .nav-link:hover,
+.ItemsBar .imgs .active:hover {
+  background-color: #0e1333;
+  color: #fff;
+}
+.ItemsBar .imgs .active {
+  color: #0e1333;
+  border-bottom: solid 2.5px #0e1333;
+  padding-bottom: 2.5rem;
+}
+.ItemsBar .img1 {
+  background-image: url("https://m2.alothemes.com/safira/media/wysiwyg/alothemes/demo1/banner-02.jpg");
+}
+.ItemsBar .img2 {
+  background-image: url("https://m2.alothemes.com/safira/media/wysiwyg/alothemes/demo1/banner-03.jpg");
+}
+.ItemsBar .img3 {
+  background-image: url("https://m2.alothemes.com/safira/media/wysiwyg/alothemes/demo1/banner-01.jpg");
+}
+
+.contact-us {
+  margin: 100px;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.contact-us .contact-form {
+  width: 60%;
+  padding: 100px 20px;
+}
+.contact-us .contact-info {
+  padding-top: 100px;
+  color: #fff;
+  width: 40%;
+  background-color: #0e1333;
+}
+.contact-us .contact-form-input {
+  width: 47%;
+}/*# sourceMappingURL=Main.css.map */
