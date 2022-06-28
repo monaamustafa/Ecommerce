@@ -1,14 +1,13 @@
 import React from 'react'
-import ListOfProducts from '../Products/ListOfProducts'
+import ItemsBar from './ItemsBar'
 import MySlider from './MySlider'
 
 export default function Home(props) {
   
   return (
     <>
-    <MySlider/>
-    <ListOfProducts />
-  
+      <MySlider/>
+      <ItemsBar />
     </>
     )
 }

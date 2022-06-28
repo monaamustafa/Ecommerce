@@ -1,0 +1,52 @@
+.slider-content {
+  color: #000 !important;
+  position: absolute;
+  text-align: left !important;
+  top: 15%;
+  left: 10%;
+  width: 38%;
+}
+.slider-content h4 {
+  font-size: 40px;
+  display: inline-block;
+  margin: 0 0.5rem;
+  -webkit-animation: fadeInLeft;
+          animation: fadeInLeft;
+  /* referring directly to the animation's @keyframe declaration */
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  /* don't forget to set a duration! */
+}
+.slider-content h3 {
+  font-weight: 700;
+  font-size: 40px;
+  -webkit-animation: fadeInRight;
+          animation: fadeInRight;
+  /* referring directly to the animation's @keyframe declaration */
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+.slider-content p {
+  color: #5c5e5f;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.4;
+  -webkit-animation: fadeInRight;
+          animation: fadeInRight;
+  /* referring directly to the animation's @keyframe declaration */
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+.slider-content .shop-now {
+  margin-top: 60px;
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 20px;
+  color: azure;
+  background-color: #f30c79;
+  -webkit-animation: backInDown;
+          animation: backInDown;
+  /* referring directly to the animation's @keyframe declaration */
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}/*# sourceMappingURL=home.css.map */

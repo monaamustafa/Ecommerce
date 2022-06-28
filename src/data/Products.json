@@ -1,8 +1,9 @@
+
 [
     {
         "id":1,
         "name":"Andie Lighted Grey",
-        "price":550.00,
+        "price":"590.00",
         "image":"https://m2.alothemes.com/safira/media/catalog/product/cache/d500e214958dbc08ac65dad036025b47/1/4/14_1_4.jpg",
         "amount":200,
         "category":"watch"
@@ -12,7 +13,7 @@
         "price":550.00,
         "image":"https://m2.alothemes.com/safira/media/catalog/product/cache/d500e214958dbc08ac65dad036025b47/1/6/16_3.jpg",
         "amount":200,
-        "category":"watch"
+        "category":"chairs"
     },    {
         "id":3,
         "name":"Andie Lighted wooden",
@@ -25,7 +26,7 @@
         "id":4,
         "name":"Andie Lighted Grey",
         "price":550.00,
-        "image":"",
+        "image":"https://m2.alothemes.com/safira/media/catalog/product/cache/050ae619cade564c4ea2c7008ad0fd9d/9/_/9_1_9.jpg",
         "amount":200,
         "category":"watch"
     }
@@ -33,9 +34,9 @@
         "id":5,
         "name":"Andie Lighted Grey",
         "price":550.00,
-        "image":"",
+        "image":"https://m2.alothemes.com/safira/media/catalog/product/cache/85933440cdcc936886c7d5f6aed18d24/3/_/3_62_1.jpg",
         "amount":200,
-        "category":"watch"
+        "category":"chiare"
     }
     ,    {
         "id":6,

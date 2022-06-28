@@ -7,16 +7,23 @@
   padding: 1%;
 }
 .footer .phonesection .phone-icon {
-  font-size: 60px;
-  padding: 1%;
-  margin: 1%;
-  color: #f30c79;
+  margin: 2%;
 }
 .footer .social-icon {
-  font-size: 30px;
+  font-size: 20px;
 }
 .footer .social-icon .icon {
-  padding: 1%;
+  padding: 20px;
+}
+.footer .social-icon .icon:hover {
+  display: inline-block;
+  margin: 0 0.5rem;
+  -webkit-animation: bounce;
+          animation: bounce;
+  /* referring directly to the animation's @keyframe declaration */
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  /* don't forget to set a duration! */
 }
 
 .footerDetials {
@@ -38,7 +45,7 @@
 }
 .footerDetials .details h6::after {
   content: "";
-  border-bottom: 3px solid #f30c79;
+  border-bottom: 2px solid #f30c79;
   width: 50px;
   display: block;
 }/*# sourceMappingURL=Footer.css.map */

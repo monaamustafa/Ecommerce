@@ -1,39 +1,35 @@
+@import "../../Sass/_Variables";
 .fNav {
   border-bottom: 1px solid #ddd;
   padding-top: 15px;
   padding-bottom: 15px;
 }
-
 #dropdown-basic {
-  color: black;
+  color: #000;
   margin: 0;
   background-color: transparent;
   outline: none;
   border: none;
   padding: 0;
 }
-
 #dropdown-basic:focus {
   outline: none;
   box-shadow: none;
 }
-
 #dropnav {
   margin: auto 0;
 }
-
 svg:hover {
-  color: #f30c79;
+  color: $MainColor;
 }
 
 #searchButton {
   background-color: transparent !important;
   border: none;
-  color: #DDD;
+  color: #ddd;
   border-right: 1px solid #ddd;
   /* position: absolute; */
 }
-
 #searchForm {
   height: 40px;
   border-radius: 50px;
@@ -41,33 +37,35 @@ svg:hover {
   margin: auto 20px;
   border: 1px solid #ddd;
 }
-
 .searchBar {
   background-color: transparent;
 }
-
-#searchForm ::-moz-placeholder {
-  padding: 50px;
-}
-
-#searchForm :-ms-input-placeholder {
-  padding: 50px;
-}
-
 #searchForm ::placeholder {
   padding: 50px;
 }
-
 #searchTerm {
   border: 0;
 }
-
 /* .Icons{
-  margin: auto;
-} */
+    margin: auto;
+  } */
 .Icons {
   margin: auto;
+  .icon {
+    margin: auto 10px;
+    // padding-left:10px;
+  }
 }
-.Icons .icon {
-  margin: auto 10px;
-}/*# sourceMappingURL=headerStyles.css.map */
+.navLink {
+  color: black !important;
+  margin: 1% 50px;
+  font-size: 18px;
+  font-weight: 600;
+  &:hover {
+    color: $MainColor !important;
+    border-bottom: 2px solid $MainColor;
+  }
+}
+#basic-nav-dropdown:hover {
+  color: $MainColor !important;
+}
