@@ -28,7 +28,6 @@ export default function ItemsBar() {
           <div>
             <NavLink
               to={"/about"}
-              ClassName=""
               className={({ isActive }) =>
                 ["nav-link", isActive ? "active" : null]
                   .filter(Boolean)

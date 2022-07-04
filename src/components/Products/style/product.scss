@@ -1,16 +1,56 @@
+@import "../../Sass/_Variables";
+
+@mixin cartStyle {
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #ddd;
+  &:hover {
+    border-color: $MainColor;
+  }
+  .productCard-img {
+    height: auto;
+    display: block;
+    overflow-y: hidden;
+    overflow: hidden;
+    img {
+      width: 100%;
+      vertical-align: middle;
+      display: block;
+      transition: transform 2s;
+      // animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+      // animation-duration: 2s; /* don't forget to set a duration! */
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+ 
+  
+}
 p {
   padding: 0 !important;
   margin: 0 !important;
+  
 }
-
+.productCard {
+  width: 31%;
+  @include cartStyle;
+  .productCard-content{
+    margin-top: 10px;
+  }
+}
 .prod-img {
   width: 48%;
+  overflow: hidden;
   img {
     width: 100%;
-    display: inline-block;
+    display: block;
     margin: 0 0.5rem;
-    animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 2s; /* don't forget to set a duration! */ 
+    transition: transform 2s;
+    overflow: hidden;
+    &:hover {
+      transform: scale(1.3);
+    }
   }
 }
 .prod-cont {
@@ -68,7 +108,7 @@ p {
     }
   }
 }
-.Related-poducts {
+.Related-poducts{
   margin-bottom: 50px;
   margin-top: 80px;
   border: 1px solid #ddd;
@@ -91,7 +131,9 @@ p {
       display: block;
     }
   }
-  .productCard {
+  .related-ProductCard{
     width: 18% !important;
+    @include cartStyle;
+    
   }
 }

@@ -69,3 +69,59 @@ svg:hover {
 #basic-nav-dropdown:hover {
   color: $MainColor !important;
 }
+.Icons {
+  position: relative;
+
+  .cart-icon {
+    margin-right: 30px;
+    .numOfClass {
+      // width: 20px;
+      // height: 20px;
+      padding: 1px 7px;
+      background-color: $MainColor;
+      text-align: center;
+      color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 13px;
+      right: 20px;
+    }
+  }
+}
+.MainBar{
+  position: relative;
+  
+  .listItems {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    text-align: center;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 20vw;
+    z-index: 100;
+    background-color: #ddd;
+    h3{
+      &::after{
+        content: '';
+        display: block;
+        border-bottom: 2px solid $MainColor;
+        width: 50px;
+        text-align: center;
+        margin: auto;
+      }
+    }
+  }
+  .wishactive {
+    display: block;
+  }
+  .cartactive {
+    display: block;
+  }
+  .close-icon{
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
