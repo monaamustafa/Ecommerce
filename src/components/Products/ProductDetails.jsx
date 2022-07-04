@@ -39,11 +39,11 @@ function ProductDetails(props) {
                 </div>
               </div>
               <div>
-                <span class="material-symbols-outlined">grade</span>
-                <span class="material-symbols-outlined">grade</span>
-                <span class="material-symbols-outlined">grade</span>
-                <span class="material-symbols-outlined">grade</span>
-                <span class="material-symbols-outlined">grade</span>
+                <span className="material-symbols-outlined">grade</span>
+                <span className="material-symbols-outlined">grade</span>
+                <span className="material-symbols-outlined">grade</span>
+                <span className="material-symbols-outlined">grade</span>
+                <span className="material-symbols-outlined">grade</span>
                 <span> | Be the first to review this product</span>
               </div>
               <h3>${productState.price}</h3>
@@ -76,7 +76,7 @@ function ProductDetails(props) {
                 <div className="d-flex why-us justify-content-between">
                   <div className="why-us-details">
                     <div className="d-flex">
-                      <div class="material-symbols-outlined icon">
+                      <div className="material-symbols-outlined icon">
                         local_shipping
                       </div>
                       <div className="details">
@@ -87,7 +87,7 @@ function ProductDetails(props) {
                   </div>
                   <div className="why-us-details">
                     <div className="d-flex">
-                      <div class="material-symbols-outlined icon">
+                      <div className="material-symbols-outlined icon">
                         receipt_long
                       </div>
                       <div className="details">
@@ -98,7 +98,9 @@ function ProductDetails(props) {
                   </div>
                   <div className="why-us-details">
                     <div className="d-flex">
-                      <div class="material-symbols-outlined icon">payments</div>
+                      <div className="material-symbols-outlined icon">
+                        payments
+                      </div>
 
                       <div className="details">
                         <p className="P-head">PAYMENT SECURED</p>
@@ -114,22 +116,24 @@ function ProductDetails(props) {
       </div>
       <div className="Related-poducts">
         <h3>Related Products</h3>
-        <div className="d-flex  justify-content-around">
-        {products &&
-          products.slice(0, 5).map((product, index) => {
-            return (
-              <div className="bg-light productCard" key={product.id}>
-                <img src={product.image} alt="sdkjnjhs"/>
-                <h6>
-                  {product.name}
-                </h6>
-                <p>${product.price}</p>
-                <hr/>
-                <NavLink to={`/product/${product.id}`}>Show</NavLink>
-              </div>
-            );
-          })}
-      </div>
+        <div className="d-flex justify-content-around">
+          {products &&
+            products.slice(0, 5).map((product, index) => {
+              return (
+                <div className="related-ProductCard" key={product.id}>
+                  <div className="productCard-img">
+                    <img src={product.image} alt="sdkjnjhs" />
+                  </div>
+                  <div className=" related-ProductCard-content">
+                    <h6>{product.name}</h6>
+                    <p>${product.price}</p>
+                    <hr />
+                    <NavLink to={`/product/${product.id}`}>Show</NavLink>
+                  </div>
+                </div>
+              );
+            })}
+        </div>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ function ListOfProducts(props) {
     console.log(productState);
   });
   return (
-    <div>
+    <>
       <LocationPanner loc="Products" path="/product" />
       <div className="container">
         <h3 className=" p-3">products List</h3>
@@ -22,19 +22,21 @@ function ListOfProducts(props) {
             products.map((product, index) => {
               return (
                 <div className="productCard" key={product.id}>
-                  <img src={product.image} alt="sdkjnjhs" />
-                  <h6>
-                    {product.name}
-                  </h6>
-                  <p>{product.price}</p>
-                  <hr />
-                  <NavLink to={`/product/${product.id}`}>Show</NavLink>
+                  <div className="productCard-img">
+                    <img src={product.image} alt="sdkjnjhs" />
+                  </div>
+                  <div className="productCard-content">
+                    <h6>{product.name}</h6>
+                    <p>{product.price}</p>
+                    <hr />
+                    <NavLink to={`/product/${product.id}`}>Show</NavLink>
+                  </div>
                 </div>
               );
             })}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 let mapStateToProps = (state) => {

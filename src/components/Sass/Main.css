@@ -34,15 +34,15 @@ p {
 }
 
 .breadcrumbs {
-  background-image: url("https://images.unsplash.com/photo-1521193089946-7aa29d1fe776?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+  background-image: url("https://m2.alothemes.com/safira/static/version1654241668/frontend/Alothemes/safira/en_US/images/bkg_breadcrumbs.jpg");
   height: 100px;
   background-size: cover;
   text-align: center;
   padding: 90px;
 }
 .breadcrumbs .location-link {
-  color: #eee;
-  text-shadow: 3px 3px 2px rgb(128, 76, 109);
+  color: rgb(82, 80, 80);
+  text-shadow: 3px 3px 2px rgb(172, 167, 167);
   padding-left: 5px;
   padding-right: 5px;
   font-weight: 700;
@@ -66,19 +66,6 @@ p {
 .flex-con {
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.productCard {
-  width: 31%;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  border: 1px solid #ddd;
-}
-.productCard:hover {
-  border-color: #f30c79;
-}
-.productCard img {
-  width: 100%;
 }
 
 .about h5 {
@@ -179,11 +166,67 @@ p {
   padding: 100px 20px;
 }
 .contact-us .contact-info {
-  padding-top: 100px;
+  padding: 100px 30px 0;
   color: #fff;
   width: 40%;
-  background-color: #0e1333;
+  background-image: url("https://images.unsplash.com/photo-1656576897856-8231e183d2cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxM3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60");
+  background-size: cover;
+}
+.contact-us .contact-info .contact-icon {
+  margin: 10px;
+}
+.contact-us .contact-info .contact-icon .icon {
+  font-size: 20px;
+  padding: 15px;
+  color: #fff !important;
+  color: #000;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+}
+.contact-us .contact-info .contact-icon .contact-p {
+  margin: 10px !important;
 }
 .contact-us .contact-form-input {
   width: 47%;
+}
+
+.blog .blog-details {
+  width: 48%;
+  padding: 100px 20px;
+}
+.blog .blog-details .blog-img {
+  position: relative;
+}
+.blog .blog-details .blog-img img {
+  width: 100%;
+}
+.blog .blog-details .blog-img .blog-date {
+  width: 50px;
+  background-color: #f30c79;
+  color: #fff;
+  padding: 1%;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  height: 65px;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+.blog .blog-details .blog-img .blog-date p:first-child {
+  border-bottom: 1px solid #fff;
+}
+
+.error {
+  padding: 100px;
+}
+.error .error-content {
+  margin-top: 20%;
+}
+.error .error-content h3 {
+  font-size: 40px;
+  font-weight: 700;
 }/*# sourceMappingURL=Main.css.map */
