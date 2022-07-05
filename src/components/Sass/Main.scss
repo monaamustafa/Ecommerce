@@ -15,15 +15,16 @@ p {
   height: 100px;
   background-size: cover;
   text-align: center;
-  padding: 90px;
+  padding: 40px;
   .location-link {
     color: rgb(82, 80, 80);
     text-shadow: 3px 3px 2px rgb(172, 167, 167);
     padding-left: 5px;
     padding-right: 5px;
-    font-weight: 700;
     letter-spacing: 2px;
-    // font-size: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
     &:hover {
       color: $MainColor;
     }
@@ -213,5 +214,13 @@ p {
       font-size: 40px;
       font-weight: 700;
     }
+  }
+}
+.emptyCart{
+  padding: 20px;
+  .icon{
+    font-size: 100px;
+    color: #ddd;
+
   }
 }

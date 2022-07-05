@@ -11,6 +11,7 @@ import { createStore, applyMiddleware } from "redux";
 import promiseMW from "redux-promise";
 import rootReducer from "./Redux/reducers/index";
 import { Provider } from "react-redux";
+
 let myStor = applyMiddleware(promiseMW)(createStore)(rootReducer);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

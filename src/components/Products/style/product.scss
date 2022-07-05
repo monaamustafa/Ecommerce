@@ -24,18 +24,15 @@
       }
     }
   }
- 
-  
 }
 p {
   padding: 0 !important;
   margin: 0 !important;
-  
 }
 .productCard {
   width: 31%;
   @include cartStyle;
-  .productCard-content{
+  .productCard-content {
     margin-top: 10px;
   }
 }
@@ -108,7 +105,7 @@ p {
     }
   }
 }
-.Related-poducts{
+.Related-poducts {
   margin-bottom: 50px;
   margin-top: 80px;
   border: 1px solid #ddd;
@@ -131,9 +128,13 @@ p {
       display: block;
     }
   }
-  .related-ProductCard{
+  .related-ProductCard {
     width: 18% !important;
     @include cartStyle;
-    
+  }
+}
+.cartList {
+  .cart-img-container {
+    width: 35%;
   }
 }

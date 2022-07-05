@@ -5,18 +5,15 @@ import * as ai from "react-icons/ai";
 import { Form, Button, Dropdown } from "react-bootstrap";
 import "./style/Header.css";
 import CartList from "../Products/CartList";
+import { useCart } from "react-use-cart";
 function MainNav(props) {
-  let { count, increase, decrease } = props;
   const [cartList, setCartList] = useState(false);
-  const [wishList, setWishList] = useState(false);
 
+  const { totalItems } = useCart();
   const showCartList = () => {
     setCartList(!cartList);
   };
 
-  const showWishList = () => {
-    setWishList(!wishList);
-  };
   return (
     <div className="MainBar">
       <div className="container-fluid fNav">
@@ -55,7 +52,6 @@ function MainNav(props) {
             <div className="Icons d-flex">
               <div>
                 <svg
-                  onClick={showWishList}
                   xmlns="http://www.w3.org/2000/svg"
                   width="25"
                   height="25"
@@ -79,7 +75,7 @@ function MainNav(props) {
                   <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
                 </svg>
                 <div className="numOfClass">
-                  <p>{count}</p>
+                  <p>{totalItems}</p>
                 </div>
               </div>
             </div>
@@ -89,27 +85,11 @@ function MainNav(props) {
 
       <div className={cartList ? "listItems cartactive" : "listItems"}>
         <ai.AiOutlineClose className="close-icon" onClick={showCartList} />
-        <h3>Cart List</h3>
-        <CartList />
-
-      </div>
-      <div className={wishList ? "listItems wishactive" : "listItems"}>
-        <ai.AiOutlineClose className="close-icon" onClick={showWishList} />
-        <h3>Wish List</h3>
+        <h3>Cart List <span> {totalItems}</span></h3>
+        <CartList  />
       </div>
     </div>
   );
 }
 
-let mapStateToProps = (state) => {
-  return {
-    count: state.counter.count,
-  };
-};
-let mapDispatchToProps = (dispatch) => {
-  return {
-    increase: () => dispatch({ type: "INCREASE" }),
-    decrease: () => dispatch({ type: "DECREASE" }),
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(MainNav);
+export default MainNav;

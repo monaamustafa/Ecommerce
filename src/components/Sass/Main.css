@@ -1,3 +1,12 @@
+button {
+  border: none;
+  background-color: transparent;
+}
+
+img {
+  width: 100%;
+}
+
 .carousel-indicators [data-bs-target] {
   background-color: #f30c79;
 }
@@ -38,15 +47,17 @@ p {
   height: 100px;
   background-size: cover;
   text-align: center;
-  padding: 90px;
+  padding: 40px;
 }
 .breadcrumbs .location-link {
   color: rgb(82, 80, 80);
   text-shadow: 3px 3px 2px rgb(172, 167, 167);
   padding-left: 5px;
   padding-right: 5px;
-  font-weight: 700;
   letter-spacing: 2px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 20px;
 }
 .breadcrumbs .location-link:hover {
   color: #f30c79;
@@ -229,4 +240,12 @@ p {
 .error .error-content h3 {
   font-size: 40px;
   font-weight: 700;
+}
+
+.emptyCart {
+  padding: 20px;
+}
+.emptyCart .icon {
+  font-size: 100px;
+  color: #ddd;
 }/*# sourceMappingURL=Main.css.map */
