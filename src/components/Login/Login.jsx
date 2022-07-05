@@ -7,7 +7,7 @@ import "./style/register.css";
 export default function Login() {
   return (
     <>
-      <LocationPanner loc="login" path="/login" />
+      <LocationPanner  />
       <div className="container">
       <div className="d-flex justify-content-center">
         <div className="formItem">

@@ -6,7 +6,7 @@ import "./style/register.css";
 export default function Register() {
   return (
     <div>
-      <LocationPanner loc="Register" path="/register" />
+      <LocationPanner  />
       <div className="container">
         <Form className="d-flex justify-content-center">
           <div className="formItem">

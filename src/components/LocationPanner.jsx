@@ -1,17 +1,18 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-
+import React from "react";
+import { Link } from "react-router-dom";
+import useBreadcrumbs from "use-react-router-breadcrumbs";
 export default function LocationPanner(props) {
-  let {loc,path}=props
-  console.log(props)
+  const breadcrumbs = useBreadcrumbs();
   return (
-    <div className='breadcrumbs'>
-      <div className=''>
-        <h3>
-          <NavLink className={'location-link'} to='/home'>Home</NavLink>-
-          <NavLink className={'location-link'} to={path}>{loc}</NavLink>
-        </h3>
+    <React.Fragment>
+      <div className="breadcrumbs">
+        {console.log(breadcrumbs)}
+        {breadcrumbs.map(({ breadcrumb },index) => (
+          <Link  key={index} to={`/${breadcrumb.props.children}`} className="location-link">
+            {breadcrumb}
+          </Link>
+        ))}
       </div>
-    </div>
-  )
+    </React.Fragment>
+  );
 }

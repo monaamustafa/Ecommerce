@@ -5,7 +5,7 @@ import LocationPanner from "./LocationPanner";
 export default function Blog() {
   return (
     <div className="blog">
-      <LocationPanner loc="blog" path="blog"/>
+      <LocationPanner />
       <div className="container">
         <div className="d-flex justify-content-between">
           <div className="blog-details">

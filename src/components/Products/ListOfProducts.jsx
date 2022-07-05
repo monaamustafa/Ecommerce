@@ -18,7 +18,7 @@ function ListOfProducts(props) {
   });
   return (
     <>
-      <LocationPanner loc="Products" path="/product" />
+      <LocationPanner />
       <div className="container">
         <h3 className=" p-3">products List</h3>
         <div className="d-flex  flex-con ">
