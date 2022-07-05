@@ -1,45 +1,64 @@
 import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import showCartItemsAction from "../../Redux/action/showCartItemsAction";
+import { useCart } from "react-use-cart";
+import * as gi from "react-icons/gi";
+import * as ai from "react-icons/ai";
+import "./style/product.css";
+import { Link } from "react-router-dom";
 
-function CartList(props) {
-  let [productState, setProductState] = useState();
-  let { products, getProducts } = props;
-  useEffect(() => {
-    getProducts();
-    setProductState(products);
-    console.log(products);
-    console.log(productState);
-  });
+function CartList() {
+  const {
+    isEmpty,
+    totalUniqueItems,
+    totalItems,
+    items,
+    updateItemQuantity,
+    removeItem,
+  } = useCart();
+  if (isEmpty)
+    return (
+      <div className="emptyCart text-center">
+        <gi.GiShoppingBag className="icon" />
+        <p>Your cart is empty</p>
+      </div>
+    );
+  console.log(items);
 
   return (
     <>
-      <div className="container">
-        <div className="d-flex flex-con ">
-          {products &&
-            products.map((product, index) => {
-              return (
-                <div className="productCard" key={product.id}>
-                  {/* <img src={product.image} alt="sdkjnjhs" /> */}
-                  <h6>{product.id}</h6>
-                  <hr />
-                </div>
-              );
-            })}
-        </div>
-      </div>
+      <section className="cartList">
+        {items.map((item) => (
+          <div className="d-flex" key={item.id}>
+            <div className="cart-img-container">
+              <img src={item.image} />
+            </div>
+            <div className="cart-content">
+              <div>
+                <p>
+                  {item.quantity} x {item.name}
+                </p>
+                <p>{item.price}</p>
+              </div>
+              <div>
+                <button
+                  onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
+                >
+                  -
+                </button>
+                <button
+                  onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
+                >
+                  +
+                </button>
+                <button onClick={() => removeItem(item.id)}>
+                <ai.AiOutlineDelete/>
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+        <Link to={'/checkout'}> Check Out </Link>
+      </section>
     </>
   );
 }
-let mapStateToProps = (state) => {
-  return {
-    products: state.cartList,
-  };
-};
-let mapDispatchToProps = (dispatch) => {
-  return {
-    getProducts: () => dispatch(showCartItemsAction()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(CartList);
+export default CartList;

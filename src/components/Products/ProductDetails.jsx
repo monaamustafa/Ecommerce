@@ -4,8 +4,15 @@ import { connect } from "react-redux";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { useCart } from "react-use-cart";
+import * as ai from "react-icons/ai";
+import * as bs from "react-icons/bs";
+import * as fa from "react-icons/fa";
+import * as gi from "react-icons/gi";
 import "./style/product.css";
 function ProductDetails(props) {
+  const { addItem } = useCart();
+
   let { id } = useParams();
   let [productState, setProductState] = useState([]);
   let { products, getProducts } = props;
@@ -39,11 +46,11 @@ function ProductDetails(props) {
                 </div>
               </div>
               <div>
-                <span className="material-symbols-outlined">grade</span>
-                <span className="material-symbols-outlined">grade</span>
-                <span className="material-symbols-outlined">grade</span>
-                <span className="material-symbols-outlined">grade</span>
-                <span className="material-symbols-outlined">grade</span>
+                <ai.AiOutlineStar />
+                <ai.AiOutlineStar />
+                <ai.AiOutlineStar />
+                <ai.AiOutlineStar />
+                <ai.AiOutlineStar />
                 <span> | Be the first to review this product</span>
               </div>
               <h3>${productState.price}</h3>
@@ -56,7 +63,12 @@ function ProductDetails(props) {
                   keychain loop.
                 </p>
                 <div className="add-to-cart-form">
-                  <button className="add-to-cart-btn">Add To Cart</button>
+                  <button
+                    className="add-to-cart-btn"
+                    onClick={() => addItem(productState)}
+                  >
+                    Add To Cart
+                  </button>
                 </div>
                 <div className="d-flex add-to-wish-list">
                   <svg
@@ -76,8 +88,8 @@ function ProductDetails(props) {
                 <div className="d-flex why-us justify-content-between">
                   <div className="why-us-details">
                     <div className="d-flex">
-                      <div className="material-symbols-outlined icon">
-                        local_shipping
+                      <div>
+                        <bs.BsTruck className="icon" />
                       </div>
                       <div className="details">
                         <p className="P-head">FREE DELIVERY</p>
@@ -87,8 +99,8 @@ function ProductDetails(props) {
                   </div>
                   <div className="why-us-details">
                     <div className="d-flex">
-                      <div className="material-symbols-outlined icon">
-                        receipt_long
+                      <div>
+                        <gi.GiPresent className="icon" />
                       </div>
                       <div className="details">
                         <p className="P-head">INTEREST FREE FINANCE</p>
@@ -98,8 +110,8 @@ function ProductDetails(props) {
                   </div>
                   <div className="why-us-details">
                     <div className="d-flex">
-                      <div className="material-symbols-outlined icon">
-                        payments
+                      <div>
+                        <fa.FaMoneyBillWave className="icon" />
                       </div>
 
                       <div className="details">
