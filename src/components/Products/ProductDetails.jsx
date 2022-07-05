@@ -10,6 +10,7 @@ import * as bs from "react-icons/bs";
 import * as fa from "react-icons/fa";
 import * as gi from "react-icons/gi";
 import "./style/product.css";
+import LocationPanner from "../LocationPanner";
 function ProductDetails(props) {
   const { addItem } = useCart();
 
@@ -24,6 +25,8 @@ function ProductDetails(props) {
   });
   return (
     <div className="container">
+      <LocationPanner/>
+
       <div className="d-flex justify-content-between">
         <div className="prod-img">
           <img src={productState.image} alt="sdkjnjhs" />

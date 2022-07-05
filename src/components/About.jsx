@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import LocationPanner from "./LocationPanner";
 
 export default function About() {
   return (
+    <>
+    <LocationPanner/>
     <div className="container about">
       <section className="d-flex Mission-Vision">
         <div className="Mission-Vision-img">
@@ -88,5 +91,7 @@ export default function About() {
         </div>
       </section>
     </div>
+    </>
+    
   );
 }

@@ -5,7 +5,7 @@ import LocationPanner from "./LocationPanner";
 export default function ContactUs() {
   return (
     <>
-      <LocationPanner loc="Contact Us" path="ContactUs" />
+      <LocationPanner />
       <div className="container contact-us ">
         <div className="d-flex">
           <div className="contact-form">
