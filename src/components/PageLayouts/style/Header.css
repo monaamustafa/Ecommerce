@@ -30,6 +30,9 @@ img {
 #dropnav {
   margin: auto 0;
 }
+#dropnav .accountLog {
+  padding: 20px;
+}
 
 svg:hover {
   color: #f30c79;
