@@ -6,18 +6,42 @@ import { Form, Button, Dropdown } from "react-bootstrap";
 import "./style/Header.css";
 import CartList from "../Products/CartList";
 import { useCart } from "react-use-cart";
+import { auth } from "../../database/auth-config";
+import { onAuthStateChanged , si} from "firebase/auth";
+
 function MainNav(props) {
   const [cartList, setCartList] = useState(false);
+  const [user, setUser] = useState({});
 
   const { totalItems } = useCart();
   const showCartList = () => {
     setCartList(!cartList);
   };
+  onAuthStateChanged(auth, (user) => {
+    setUser(user);
+  });
 
   return (
     <div className="MainBar">
       <div className="container-fluid fNav">
         <div className="d-flex justify-content-around">
+          {user ? <p>{user.email}</p>:
+<section id="dropnav">
+          <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic">
+              <FontAwesomeIcon icon="fa-solid fa-user" />
+              My Account
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="/login">Login</Dropdown.Item>
+              <Dropdown.Item href="register">Register</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          
+        </section>
+
+
+          }
           <section id="dropnav">
             <Dropdown>
               <Dropdown.Toggle id="dropdown-basic">
@@ -82,11 +106,12 @@ function MainNav(props) {
           </section>
         </div>
       </div>
-
       <div className={cartList ? "listItems cartactive" : "listItems"}>
         <ai.AiOutlineClose className="close-icon" onClick={showCartList} />
-        <h3>Cart List <span> {totalItems}</span></h3>
-        <CartList  />
+        <h3>
+          Cart List <span> {totalItems}</span>
+        </h3>
+        <CartList />
       </div>
     </div>
   );

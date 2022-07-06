@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LocationPanner from "../LocationPanner";
 import "./style/register.css";
+import { auth } from "../../database/auth-config";
+
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 export default function Login() {
+  
+  const Navigate=useNavigate()
+  const [loginEmail, setLoginEmail] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
+
+  const login = async () => {
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth,
+        loginEmail,
+        loginPassword
+      );
+      console.log(user);
+      Navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <LocationPanner  />
@@ -17,31 +38,34 @@ export default function Login() {
               <Form.Label>
                 Email <span>*</span>
               </Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control type="email" placeholder="Enter email"  onChange={(event) => {
+                  setLoginEmail(event.target.value);
+                }}/>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
               <Form.Label>
                 Password <span>*</span>
               </Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" placeholder="Password"  onChange={(event) => {
+                  setLoginPassword(event.target.value);
+                }}/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
-            <Button className="MColor" type="submit">
+            <Button className="MColor" onClick={login}>
             SIGN IN
             </Button>
           </Form>
         </div>
         <div className="formItem">
           <h4>Don't Have An Account? Register Now !</h4>
-          <NavLink to={'/register'}
-            
+          <Link to={'/register'}            
             className="btn MColor"
             >
             REGISTER NOW!
-          </NavLink>
+          </Link>
         </div>
       </div>
     </div>

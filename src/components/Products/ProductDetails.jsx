@@ -19,7 +19,7 @@ function ProductDetails(props) {
   let { products, getProducts } = props;
   useEffect(() => {
     getProducts();
-    let hh = products.find((item) => item.id == id);
+    let hh = products.find((item) => item.id === id);
     setProductState(hh);
     console.log(productState);
   });
