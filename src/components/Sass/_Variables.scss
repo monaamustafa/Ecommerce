@@ -1,24 +1,22 @@
-$MainColor:#f30c79;
-$SecondColor:#c2015b;
-$WhiteColor:#fff;
-$logoFont:  'Orbitron', sans-serif;
-$bodyFont:  'Alegreya Sans', sans-serif;
-
+$MainColor: #f30c79;
+$SecondColor: #c2015b;
+$WhiteColor: #fff;
+$logoFont: "Orbitron", sans-serif;
+$bodyFont: "Alegreya Sans", sans-serif;
 
 @mixin btnStyles {
-    background-color: $MainColor !important;
-    border: none !important;
-    border-radius: 20px !important;
-    color: #fff !important;
-    &:hover{
-        background-color: #333 !important;
-
-    }
+  background-color: $MainColor !important;
+  border: none !important;
+  border-radius: 20px !important;
+  color: #fff !important;
+  &:hover {
+    background-color: #333 !important;
+  }
 }
-button{
-    border: none;
-    background-color: transparent;
+button {
+  border: none;
+  background-color: transparent;
 }
-img{
-    width: 100%;
+img {
+  width: 100%;
 }

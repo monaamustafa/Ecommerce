@@ -18,6 +18,9 @@
 }
 #dropnav {
   margin: auto 0;
+  .accountLog{
+    padding:20px
+  }
 }
 svg:hover {
   color: $MainColor;
@@ -90,12 +93,10 @@ svg:hover {
 }
 .MainBar{
   position: relative;
-  
   .listItems {
     display: none;
     position: absolute;
     padding: 10px;
-    // text-align: ;
     top: 0;
     right: 0;
     height: 100vh;

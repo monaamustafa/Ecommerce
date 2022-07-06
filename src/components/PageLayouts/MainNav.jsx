@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { connect } from "react-redux";
 import * as ai from "react-icons/ai";
 import { Form, Button, Dropdown } from "react-bootstrap";
 import "./style/Header.css";
 import CartList from "../Products/CartList";
 import { useCart } from "react-use-cart";
 import { auth } from "../../database/auth-config";
-import { onAuthStateChanged , si} from "firebase/auth";
-
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { Link } from "react-router-dom";
 function MainNav(props) {
   const [cartList, setCartList] = useState(false);
   const [user, setUser] = useState({});
-
   const { totalItems } = useCart();
   const showCartList = () => {
     setCartList(!cartList);
@@ -20,41 +18,48 @@ function MainNav(props) {
   onAuthStateChanged(auth, (user) => {
     setUser(user);
   });
-
+  const signout = async () => {
+    await signOut(auth);
+  };
+  const userLogged = () => {
+    if (user) {
+      return (
+        <>
+          <Dropdown.Toggle id="dropdown-basic">
+            <FontAwesomeIcon icon="fa-solid fa-user" />
+            {user.email}
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Dropdown.Item onClick={signout}>sign Out</Dropdown.Item>
+          </Dropdown.Menu>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <Dropdown.Toggle id="dropdown-basic">
+            <FontAwesomeIcon icon="fa-solid fa-user" />
+            My Account
+          </Dropdown.Toggle>
+          <Dropdown.Menu>
+            <Link to={"/login"} className="accountLog">
+              login
+            </Link>
+            <Link to={"/Register"} className="accountLog">
+              Register
+            </Link>
+          </Dropdown.Menu>
+        </>
+      );
+    }
+  };
   return (
     <div className="MainBar">
       <div className="container-fluid fNav">
         <div className="d-flex justify-content-around">
-          {user ? <p>{user.email}</p>:
-<section id="dropnav">
-          <Dropdown>
-            <Dropdown.Toggle id="dropdown-basic">
-              <FontAwesomeIcon icon="fa-solid fa-user" />
-              My Account
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="/login">Login</Dropdown.Item>
-              <Dropdown.Item href="register">Register</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-          
-        </section>
-
-
-          }
           <section id="dropnav">
-            <Dropdown>
-              <Dropdown.Toggle id="dropdown-basic">
-                <FontAwesomeIcon icon="fa-solid fa-user" />
-                My Account
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="/login">Login</Dropdown.Item>
-                <Dropdown.Item href="register">Register</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+            <Dropdown>{userLogged()}</Dropdown>
           </section>
-
           <section className="MLogo">
             <h4>
               <a href="/home">MOON</a>
@@ -116,5 +121,4 @@ function MainNav(props) {
     </div>
   );
 }
-
 export default MainNav;
